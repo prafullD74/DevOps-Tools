@@ -23,30 +23,30 @@
 | Commands | Purpose |
 |---|---|
 | [`init`](https://developer.hashicorp.com/terraform/cli/commands/init) | Prepare your working directory for other commands |
-| [`validate`]() | Check whether the configuration is valid |
-| [`plan`]()  | Show changes required by the current configuration |
-| [`apply`]() | Create or update infrastructure |
-| [`destroy`]() | Destroy previously-created infrastructure |
+| [`validate`](https://developer.hashicorp.com/terraform/cli/commands/validate) | Check whether the configuration is valid |
+| [`plan`](https://developer.hashicorp.com/terraform/cli/commands/plan)  | Show changes required by the current configuration |
+| [`apply`](https://developer.hashicorp.com/terraform/cli/commands/apply) | Create or update infrastructure |
+| [`destroy`](https://developer.hashicorp.com/terraform/cli/commands/destroy) | Destroy previously-created infrastructure |
   
 2. All other commands:
    
 | Commands | Purpose |
 |---|---|
-| console | Try Terraform expressions at an interactive command prompt |
-| fmt | Reformat your configuration in the standard style |
+| [console](https://developer.hashicorp.com/terraform/cli/commands/console) | Try Terraform expressions at an interactive command prompt |
+| [fmt](https://developer.hashicorp.com/terraform/cli/commands/fmt) | Reformat your configuration in the standard style |
 | force-unlock | Release a stuck lock on the current workspace |
 | [get](https://developer.hashicorp.com/terraform/cli/commands/get) | Install or upgrade remote Terraform modules |
-| graph | Generate a Graphviz graph of the steps in an operation |
-| import | Associate existing infrastructure with a Terraform resource |
-| login | Obtain and save credentials for a remote host |
-| logout | Remove locally-stored credentials for a remote host |
+| [graph](https://developer.hashicorp.com/terraform/cli/commands/graph) | Generate a Graphviz graph of the steps in an operation |
+| [import](https://developer.hashicorp.com/terraform/cli/import/usage) | Associate existing infrastructure with a Terraform resource |
+| [login](https://developer.hashicorp.com/terraform/cli/commands/login) | Obtain and save credentials for a remote host |
+| [logout](https://developer.hashicorp.com/terraform/cli/commands/logout) | Remove locally-stored credentials for a remote host |
 | metadata | Metadata related commands |
 | modules | Show all declared modules in a working directory |
-| output | Show output values from your root module |
+| [output](https://developer.hashicorp.com/terraform/cli/commands/output) | Show output values from your root module |
 | providers | Show the providers required for this configuration |
 | refresh | Update the state to match remote systems |
-| show  | Show the current state or a saved plan |
-| state | Advanced state management |
+| [show](https://developer.hashicorp.com/terraform/cli/commands/show)  | Show the current state or a saved plan |
+| [state](https://developer.hashicorp.com/terraform/language/state) | Advanced state management [`terraform state list`](https://developer.hashicorp.com/terraform/cli/commands/state/list) [`terraform state show`](https://developer.hashicorp.com/terraform/cli/commands/state/show) |
 | taint | Mark a resource instance as not fully functional |
 | untaint | Remove the 'tainted' state from a resource instance |
 | version | Show the current Terraform version |
