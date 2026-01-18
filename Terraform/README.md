@@ -11,6 +11,14 @@
    -  `LABEL`: Specifies a name for the resource. Terraform uses this label to track the resource in your state file.
 4. [`provider`](https://developer.hashicorp.com/terraform/language/meta-arguments/provider) is a meta-argument. Meta-arguments are built into the Terraform language and control how Terraform creates resources.
 5. The [`provisioner`](https://developer.hashicorp.com/terraform/language/block/resource#provisioner) block defines actions to perform on the local machine or created resource, such as preparing servers or other infrastructure objects for service.
+
+## [Terraform CLI](https://developer.hashicorp.com/terraform/cli)
+1. Main commands:
+   - [`init`]()          :Prepare your working directory for other commands
+   - [`validate`]()      :Check whether the configuration is valid
+   - [`plan`]()          :Show changes required by the current configuration
+   - [`apply`]()         :Create or update infrastructure
+   - [`destroy`]()       "Destroy previously-created infrastructure
 ---
 
 ## What SOLID Means in Terraform
