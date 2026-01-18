@@ -1,6 +1,11 @@
 # [Terrafrom](https://developer.hashicorp.com/terraform)
 - Terraform is an infrastructure as code tool that lets you build, change, and version infrastructure safely and efficiently.
 - Terraform language is declarative.
+- Terraform workflow
+  1. **Initialize** prepares your workspace so Terraform can apply your configuration.
+  2. **Plan** allows you to preview the changes Terraform will make before you apply them.
+  3. **Apply** makes the changes defined by your plan to create, update, or destroy resources.
+- 
 
 ## [Terraform's configuration language](https://developer.hashicorp.com/terraform/language)
 1. Configuration files you write in Terraform language tell Terraform what plugins to install, what infrastructure to create, and what data to fetch. 
@@ -17,7 +22,7 @@
 
 | Commands | Purpose |
 |---|---|
-| [`init`]() | Prepare your working directory for other commands |
+| [`init`](https://developer.hashicorp.com/terraform/cli/commands/init) | Prepare your working directory for other commands |
 | [`validate`]() | Check whether the configuration is valid |
 | [`plan`]()  | Show changes required by the current configuration |
 | [`apply`]() | Create or update infrastructure |
@@ -30,7 +35,7 @@
 | console | Try Terraform expressions at an interactive command prompt |
 | fmt | Reformat your configuration in the standard style |
 | force-unlock | Release a stuck lock on the current workspace |
-| get | Install or upgrade remote Terraform modules |
+| [get](https://developer.hashicorp.com/terraform/cli/commands/get) | Install or upgrade remote Terraform modules |
 | graph | Generate a Graphviz graph of the steps in an operation |
 | import | Associate existing infrastructure with a Terraform resource |
 | login | Obtain and save credentials for a remote host |
@@ -50,6 +55,9 @@
 
 3. The `chdir` option instructs Terraform to change its working directory to the given directory before running the given subcommand.
 4. The Terraform CLI commands interact with the HashiCorp service [Checkpoint](https://checkpoint.hashicorp.com/) to check for the availability of new versions and for critical security bulletins about the current version.
+5. [`.terraform`](https://developer.hashicorp.com/terraform/cli/init#working-directory-contents) is a hidden directory automatically created by Terraform during `terraform init` to store cached provider plugins, modules, workspace info, and backend state metadata.
+6. When using the default local backend, Terraform stores state in `terraform.tfstate` for a single workspace, or in the `terraform.tfstate.d` directory when multiple workspaces are used.
+7.  `init` command is idempotent, and will have no effect if no changes are required. When you initialize a Terraform workspace, Terraform configures the backend, installs all providers and modules referred to in your configuration, and creates a version lock file if one doesn't already exist.[Initialize Terraform Configuration tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/init?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS).
 
 
 ---
