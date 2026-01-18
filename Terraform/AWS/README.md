@@ -4,7 +4,7 @@
 ## [Terraform AWS modules](https://registry.terraform.io/namespaces/terraform-aws-modules)
 1. [Terraform module to create AWS S3 resources](https://registry.terraform.io/modules/terraform-aws-modules/s3-bucket/aws/latest)
 
-### Terrafrom
+### Terraform
 1. **Scope**: Identify the infrastructure for your project
 2. **Author**: Write configuration to define your infrastructure
 3. **Initialize**: Install the required Terraform providers
