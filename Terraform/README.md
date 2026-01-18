@@ -8,14 +8,16 @@
 - 
 
 ## [Terraform's configuration language](https://developer.hashicorp.com/terraform/language)
-1. Configuration files you write in Terraform language tell Terraform what plugins to install, what infrastructure to create, and what data to fetch. 
-2. [Write Terraform Configuration tutorials](https://developer.hashicorp.com/terraform/tutorials/configuration-language).
-3. [`resource "<TYPE>" "<LABEL>"`](https://developer.hashicorp.com/terraform/language/block/resource#resource)
+1. Configuration files you write in Terraform language tell Terraform what plugins to install, what infrastructure to create, and what data to fetch.
+2. The Terraform language syntax is built around two key syntax constructs: `arguments` and `blocks`. Contains `argument name` = `argument's value` and a `block` is a container for other content.
+3. Terraform configurations use a limited set of `top-level blocks`- such as resources, variables, outputs, and data sources—which define most of Terraform’s functionality and are not nested inside other blocks.
+4. [Write Terraform Configuration tutorials](https://developer.hashicorp.com/terraform/tutorials/configuration-language).
+5. [`resource "<TYPE>" "<LABEL>"`](https://developer.hashicorp.com/terraform/language/block/resource#resource)
    - The [resource](https://developer.hashicorp.com/terraform/language/block/resource#resource) block defines a piece of infrastructure and specifies the settings for Terraform to create it with.
    -  `TYPE`: Specifies the type of resource to create.
    -  `LABEL`: Specifies a name for the resource. Terraform uses this label to track the resource in your state file.
-4. [`provider`](https://developer.hashicorp.com/terraform/language/meta-arguments/provider) is a meta-argument. Meta-arguments are built into the Terraform language and control how Terraform creates resources.
-5. The [`provisioner`](https://developer.hashicorp.com/terraform/language/block/resource#provisioner) block defines actions to perform on the local machine or created resource, such as preparing servers or other infrastructure objects for service.
+6. [`provider`](https://developer.hashicorp.com/terraform/language/meta-arguments/provider) is a meta-argument. Meta-arguments are built into the Terraform language and control how Terraform creates resources.
+7. The [`provisioner`](https://developer.hashicorp.com/terraform/language/block/resource#provisioner) block defines actions to perform on the local machine or created resource, such as preparing servers or other infrastructure objects for service.
 
 ## [Terraform CLI](https://developer.hashicorp.com/terraform/cli)
 1. Main commands:
