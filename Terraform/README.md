@@ -12,6 +12,12 @@
   1. **Initialize** prepares your workspace so Terraform can apply your configuration.
   2. **Plan** allows you to preview the changes Terraform will make before you apply them.
   3. **Apply** makes the changes defined by your plan to create, update, or destroy resources.
+- To deploy infrastructure with Terraform:
+  - **Scope**: Identify the infrastructure for your project.
+  - **Author**: Write the configuration for your infrastructure.
+  - **Initialize**: Install the plugins Terraform needs to manage the infrastructure.
+  - **Plan**: Preview the changes Terraform will make to match your configuration.
+  - **Apply**: Make the planned changes.
 - Terraform keeps track of your real infrastructure in a state file, which acts as a source of truth for your environment. Terraform uses the state file to determine the changes to make to your infrastructure so that it will match your configuration.
 - Terraform builds a resource graph to determine resource dependencies and creates or modifies non-dependent resources in parallel.
 - Reusable configuration components called [`modules`](https://developer.hashicorp.com/terraform/language/modules) that define configurable collections of infrastructure, saving time and encouraging best practices.
