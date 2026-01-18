@@ -46,6 +46,11 @@
 | untaint | Remove the 'tainted' state from a resource instance |
 | version | Show the current Terraform version |
 | workspace | Workspace management |
+| -chdir=DIR | Switch to a different working directory before executing the given subcommand |
+
+3. The `chdir` option instructs Terraform to change its working directory to the given directory before running the given subcommand.
+4. The Terraform CLI commands interact with the HashiCorp service [Checkpoint](https://checkpoint.hashicorp.com/) to check for the availability of new versions and for critical security bulletins about the current version.
+
 
 ---
 
