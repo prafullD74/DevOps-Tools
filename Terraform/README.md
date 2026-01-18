@@ -1,5 +1,14 @@
 # [Terrafrom](https://developer.hashicorp.com/terraform)
+- Terraform is an infrastructure as code tool that lets you build, change, and version infrastructure safely and efficiently.
+- Terraform language is declarative.
 
+## [Terraform's configuration language](https://developer.hashicorp.com/terraform/language)
+1. Configuration files you write in Terraform language tell Terraform what plugins to install, what infrastructure to create, and what data to fetch. 
+2. [Write Terraform Configuration tutorials](https://developer.hashicorp.com/terraform/tutorials/configuration-language).
+3. [`resource "<TYPE>" "<LABEL>"`](https://developer.hashicorp.com/terraform/language/block/resource#resource)
+   - The [resource](https://developer.hashicorp.com/terraform/language/block/resource#resource) block defines a piece of infrastructure and specifies the settings for Terraform to create it with.
+   -  `TYPE`: Specifies the type of resource to create.
+   -  `LABEL`: Specifies a name for the resource. Terraform uses this label to track the resource in your state file.
 
 ---
 
@@ -14,5 +23,11 @@ The SOLID principles come from object-oriented programming, but they can be adap
 | **L – Liskov Substitution** | Modules should be interchangeable if they serve the same purpose. | A “network” module could be swapped between AWS and GCP without breaking dependencies. |
 | **I – Interface Segregation** | Avoid bloated modules with too many inputs. | Provide **focused variables** so users don’t need to configure irrelevant options. |
 | **D – Dependency Inversion** | High-level modules shouldn’t depend on low-level details. | Use outputs and data sources to abstract dependencies, so modules consume interfaces rather than hard-coded resources. |
+
+### Why It Matters
+- **Clarity:** Easier to understand what each module does.  
+- **Reusability:** Modules can be reused across projects and clouds.  
+- **Maintainability:** Changes in one module don’t break unrelated infrastructure.  
+- **Scalability:** Teams can extend infrastructure without rewriting core modules.
 
 ---
