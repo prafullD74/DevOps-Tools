@@ -10,3 +10,12 @@
 3. **Initialize**: Install the required Terraform providers
 4. **Plan**: Preview the changes Terraform will make
 5. **Apply**: Make the changes to your infrastructure
+
+### [Configure your AWS credentials](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#environment-variables)
+> To use your IAM credentials to authenticate the Terraform AWS provider, set the `AWS_ACCESS_KEY_I`D and `AWS_SECRET_ACCESS_KEY` environment variables.
+```aws cli
+export AWS_ACCESS_KEY_ID=
+```
+```aws cli
+export AWS_SECRET_ACCESS_KEY=
+```
