@@ -2,7 +2,7 @@
 - [Terraform](https://youtu.be/ZFLWA1kQ3ls) is an infrastructure as code tool that lets you build, change, and version infrastructure safely and efficiently.
 - Infrastructure as Code (IaC) tools allow you to manage infrastructure with configuration files rather than through a graphical user interface.
 - HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. Terraform creates and manages resources on cloud platforms and other services through their application programming interfaces (APIs).
-- Terraform language is declarative.
+- Terraform's configuration language is declarative, meaning that it describes the desired end-state for your infrastructure, in contrast to procedural programming languages that require step-by-step instructions to perform tasks.
 - The core Terraform workflow consists of three stages: Write, Plan & Apply.
   ![core Terraform workflow](https://web-unified-docs-hashicorp.vercel.app/api/assets/terraform/latest/img/docs/intro-terraform-workflow.png)
 - [Plugin development](https://developer.hashicorp.com/terraform/plugin)Terraform is logically split into two main parts:
