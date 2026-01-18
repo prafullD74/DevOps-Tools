@@ -33,6 +33,10 @@
    -  `LABEL`: Specifies a name for the resource. Terraform uses this label to track the resource in your state file.
 6. [`provider`](https://developer.hashicorp.com/terraform/language/meta-arguments/provider) is a meta-argument. Meta-arguments are built into the Terraform language and control how Terraform creates resources.
 7. The [`provisioner`](https://developer.hashicorp.com/terraform/language/block/resource#provisioner) block defines actions to perform on the local machine or created resource, such as preparing servers or other infrastructure objects for service.
+8. The [`terraform {}`](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-create#the-terraform-block) block configures Terraform itself, including which providers to install, and which version of Terraform to use to provision your infrastructure.
+   - The `required_providers` block lets you set version constraints on the providers your configuration uses.
+   - `source` argument specifies a hostname (optional), namespace, and provider name. provider's source is `hashicorp/aws` or `registry.terraform.io/hashicorp/aws`
+   - `version` argument sets a version constraint for your (AWS) provider.
 
 ## [Terraform CLI](https://developer.hashicorp.com/terraform/cli)
 1. Main commands:
