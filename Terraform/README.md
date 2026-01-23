@@ -21,6 +21,7 @@
 - Terraform keeps track of your real infrastructure in a state file, which acts as a source of truth for your environment. Terraform uses the state file to determine the changes to make to your infrastructure so that it will match your configuration.
 - Terraform builds a resource graph to determine resource dependencies and creates or modifies non-dependent resources in parallel.
 - Reusable configuration components called [`modules`](https://developer.hashicorp.com/terraform/language/modules) that define configurable collections of infrastructure, saving time and encouraging best practices.
+- When Terraform creates an execution plan, it constructs a dependency graph to determine the correct order of operations. When you apply your plan, Terraform creates, updates, and destroys your resources in dependency order, and in parallel when possible.
 
 ## [Terraform's configuration language](https://developer.hashicorp.com/terraform/language)
 1. Configuration files you write in Terraform language tell Terraform what plugins to install, what infrastructure to create, and what data to fetch.
