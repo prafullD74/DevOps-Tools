@@ -41,6 +41,7 @@
     - Input variables let you parametrize the behavior of your Terraform configuration.
     -  variables set a default value for Terraform to use if you do not specify a value for them.
 10. Output values allow you to access attributes from your Terraform configuration and consume their values with other automation tools or workflows.
+11. Terraform prints out your output values when you run a plan or apply, and also stores them in your workspace's state file.
 
 ## [Terraform CLI](https://developer.hashicorp.com/terraform/cli)
 1. Main commands:
