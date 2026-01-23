@@ -35,3 +35,6 @@ Use `terraform apply` to plan and apply your configuration; Terraform shows the 
 - List the resources and data sources in your state with the `terrafrom state list` command.
 - Print out your workspace's entire state with `terraform show`.
 
+## AWS resource limitaion
+1. AWS does not support moving an existing EC2 instance to a new VPC
+
