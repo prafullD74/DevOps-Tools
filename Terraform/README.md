@@ -37,6 +37,10 @@
    - The `required_providers` block lets you set version constraints on the providers your configuration uses.
    - `source` argument specifies a hostname (optional), namespace, and provider name. provider's source is `hashicorp/aws` or `registry.terraform.io/hashicorp/aws`
    - `version` argument sets a version constraint for your (AWS) provider.
+9. Variables
+    - Input variables let you parametrize the behavior of your Terraform configuration.
+    -  variables set a default value for Terraform to use if you do not specify a value for them.
+10. Output values allow you to access attributes from your Terraform configuration and consume their values with other automation tools or workflows.
 
 ## [Terraform CLI](https://developer.hashicorp.com/terraform/cli)
 1. Main commands:
