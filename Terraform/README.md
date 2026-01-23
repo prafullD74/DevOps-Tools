@@ -91,7 +91,8 @@
 6. When using the default local backend, Terraform stores state in `terraform.tfstate` for a single workspace, or in the `terraform.tfstate.d` directory when multiple workspaces are used.
 7.  `init` command is idempotent, and will have no effect if no changes are required. When you initialize a Terraform workspace, Terraform configures the backend, installs all providers and modules referred to in your configuration, and creates a version lock file if one doesn't already exist.[Initialize Terraform Configuration tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/init?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS).
 
-
+### [HCP Terraform](https://app.terraform.io/)
+- HCP Terraform allows you to collaborate on infrastructure projects within your organization.
 ---
 
 ## What SOLID Means in Terraform
