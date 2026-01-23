@@ -42,6 +42,11 @@
     -  variables set a default value for Terraform to use if you do not specify a value for them.
 10. Output values allow you to access attributes from your Terraform configuration and consume their values with other automation tools or workflows.
 11. Terraform prints out your output values when you run a plan or apply, and also stores them in your workspace's state file. Review your output values using the `terraform output` command.
+12. Modules
+    - [Modules](https://registry.terraform.io/browse/modules) are reusable sets of configuration.
+    - Use modules to consistently manage complex infrastructure deployments that include multiple resources and data sources.
+    - Terraform automatically resolves dependencies within your configuration, you can organize your configuration blocks in any order you like.
+    - Whenever you add a new module to your configuration, you will need to install it by re-initializing the workspace.
 
 ## [Terraform CLI](https://developer.hashicorp.com/terraform/cli)
 1. Main commands:
