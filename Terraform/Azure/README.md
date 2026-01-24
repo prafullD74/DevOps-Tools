@@ -41,4 +41,5 @@ $env:ARM_CLIENT_SECRET="<service_principal_password>"
   ```powershell
   New-Item -Path "c:\" -Name "Create-azure-resources" -ItemType "directory"
   ```
-- 
+### Terraform
+- The `azurerm` provider's source is defined as `hashicorp/azurerm`, which is shorthand for `registry.terraform.io/hashicorp/azurerm`.
