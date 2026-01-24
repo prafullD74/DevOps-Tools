@@ -1,4 +1,6 @@
-# [Azure]()
+# [Azure](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+1. [azurerm_resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group)
+2. 
 
 ### Advantages
 1. Using Terraform has several advantages over manually managing your infrastructure:
@@ -34,8 +36,6 @@ $env:ARM_SUBSCRIPTION_ID="<azure_subscription_id>"
 $env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
 $env:ARM_CLIENT_SECRET="<service_principal_password>"
 ```
-
-
 #### version control systems (VCSs)
 - Create a folder called `Create-azure-resources`.
   ```powershell
@@ -43,3 +43,5 @@ $env:ARM_CLIENT_SECRET="<service_principal_password>"
   ```
 ### Terraform
 - The `azurerm` provider's source is defined as `hashicorp/azurerm`, which is shorthand for `registry.terraform.io/hashicorp/azurerm`.
+- The `version` attribute is optional, but recommended to lock the provider version; Without it, Terraform will always use the latest version of the provider, which may introduce breaking changes.
+- [Remote stage storage](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate)
