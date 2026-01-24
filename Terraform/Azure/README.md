@@ -45,3 +45,28 @@ $env:ARM_CLIENT_SECRET="<service_principal_password>"
 - The `azurerm` provider's source is defined as `hashicorp/azurerm`, which is shorthand for `registry.terraform.io/hashicorp/azurerm`.
 - The `version` attribute is optional, but recommended to lock the provider version; Without it, Terraform will always use the latest version of the provider, which may introduce breaking changes.
 - [Remote stage storage](https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate)
+- 
+
+## Resource Group
+```hcl
+# Configure the Azure provider
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0.2"
+    }
+  }
+
+  required_version = ">= 1.1.0"
+}
+
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_resource_group" "rg" {
+  name     = "myTFResourceGroup"
+  location = "westus2"
+}
+```
