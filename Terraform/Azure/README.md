@@ -14,8 +14,17 @@ choco install terraform
 ```
 ### [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi#microsoft-installer-msi)
 > [Enable tab completion in PowerShell](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi#microsoft-installer-msi)
-```bash
+```powershell
 az upgrade
+```
+### Authenticate
+```powershell
+az login
+az account set --subscription "my-subscription-id"
+```
+- A [Service Principal](https://learn.microsoft.com/en-us/cli/azure/azure-cli-sp-tutorial-1?view=azure-cli-latest&tabs=powershell#create-a-service-principal-with-role-and-scope) is an application within Azure Active Directory with the authentication tokens Terraform needs to perform actions on your behalf.
+```powershell
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
 ```
 
 #### version control systems (VCSs)
