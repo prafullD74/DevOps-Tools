@@ -26,6 +26,15 @@ az account set --subscription "my-subscription-id"
 ```powershell
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUBSCRIPTION_ID>"
 ```
+### [Authenticate to Azure with service principal](https://learn.microsoft.com/en-us/azure/developer/terraform/authenticate-to-azure-with-service-principle?tabs=azure-powershell)
+For security reasons, we suggest not storing credentials in the provider block.
+```powershell
+$env:ARM_CLIENT_ID="<service_principal_app_id>"
+$env:ARM_SUBSCRIPTION_ID="<azure_subscription_id>"
+$env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
+$env:ARM_CLIENT_SECRET="<service_principal_password>"
+```
+[Azure provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret#creating-a-service-principal-using-the-azure-cli)
 
 #### version control systems (VCSs)
 
