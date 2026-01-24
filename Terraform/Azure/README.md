@@ -12,6 +12,8 @@
 ```bash
 choco install terraform
 ```
+### [Install the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi#microsoft-installer-msi)
+> [Enable tab completion in PowerShell](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi#microsoft-installer-msi)
 
 #### version control systems (VCSs)
 
