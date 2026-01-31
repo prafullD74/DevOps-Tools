@@ -131,6 +131,7 @@
      - Cloud providers do not provide APIs to query multiple resources at once
      - Cloud providers almost always have API rate limiting (so Terraform can only request a certain number of resources in a period of time.)
      - Larger users of Terraform make heavy use of the `-refresh=false` flag as well as the `-target` flag in order to work around this. In these scenarios, the cached state is treated as the record of truth.
+6. Manually retrieve the state from the remote state using the `terraform state pull` command and write state with `terraform state push`.
 5. [Workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)
 6. [Remote state](https://developer.hashicorp.com/terraform/language/state/remote) is the recommended solution when using Terraform in a team it is important for everyone to be working with the same state so that operations will be applied to the same remote objects. With a fully-featured state backend, Terraform can use `remote locking` as a measure to avoid two or more different users accidentally running Terraform at the same time, and thus ensure that each Terraform run begins with the most recent updated state.
 
