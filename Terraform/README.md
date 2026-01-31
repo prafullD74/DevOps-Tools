@@ -111,7 +111,11 @@
 - Use environment variables to pass credentials when you need to use different values between the plan and apply steps.
 - The `.terraform/terraform.tfstate` file contains the backend configuration for the current working directory. All plan files capture the information in `.terraform/terraform.tfstate` at the time the plan was created. This helps ensure Terraform is applying the plan to correct set of infrastructure.
 - Recommend using environment variables to supply credentials and other sensitive data. If you use `-backend-config` or hardcode these values directly in your configuration, Terraform will include these values in both the `.terraform` subdirectory and in plan files. This can leak sensitive credentials.
-- When some or all of the arguments are omitted, we call this a `partial configuration`. With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process.
+- When some or all of the arguments are omitted, we call this a [`partial configuration`](https://developer.hashicorp.com/terraform/language/backend#partial-configuration).
+  - With a partial configuration, the remaining configuration arguments must be provided as part of [the initialization process](https://developer.hashicorp.com/terraform/cli/init).
+  - To specify a single key/value pair, use the `-backend-config="KEY=VALUE"` option when running `terraform init`. `terraform init -backend-config="<path-to-remaining-configuration>"`
+  - A backend configuration file has the contents of the `backend` block, `*.backendname.tfbackend` (e.g. config.consul.tfbackend) naming pattern.
+  - Command-line key/value pairs: The Consul backend also requires a Consul access token. Consul token would be provided by setting either the `CONSUL_HTTP_TOKEN` or `CONSUL_HTTP_AUTH` environment variables.
 
 ### [HCP Terraform](https://app.terraform.io/)
 - HCP Terraform allows you to collaborate on infrastructure projects within your organization.
