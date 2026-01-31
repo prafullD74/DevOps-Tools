@@ -5,7 +5,7 @@
 - Terraform's configuration language is declarative, meaning that it describes the desired end-state for your infrastructure, in contrast to procedural programming languages that require step-by-step instructions to perform tasks.
 - The core Terraform workflow consists of three stages: Write, Plan & Apply.
   ![core Terraform workflow](https://web-unified-docs-hashicorp.vercel.app/api/assets/terraform/latest/img/docs/intro-terraform-workflow.png)
-- [Plugin development](https://developer.hashicorp.com/terraform/plugin)Terraform is logically split into two main parts:
+- [Plugin development](https://developer.hashicorp.com/terraform/plugin) Terraform is logically split into two main parts:
   1. **Terraform Core**: is the Terraform binary that communicates with plugins to manage infrastructure resources.
   2. **Terraform Plugins**: Plugins are executable binaries written in Go that communicate with Terraform Core over an RPC interface. Terraform currently supports one type of plugin called [providers](https://developer.hashicorp.com/terraform/language/providers).
 - Terraform workflow
@@ -106,10 +106,12 @@
     }
   }
   ```
-- Terraform uses a backend called [`local`](https://developer.hashicorp.com/terraform/language/backend/local) by default. The `local` backend type stores state as a local file on disk.
+- Terraform uses a backend called [`local`](https://developer.hashicorp.com/terraform/language/backend/local) by default. The `local` backend type stores state as a local file on disk. The local backend configuration is different and entirely separate from the `terraform.tfstate` file that contains [`state data`](https://developer.hashicorp.com/terraform/language/state) about your real-world infrastructure.
 - Backend arguments are specific to the backend type and define where and how Terraform stores the configuration state.
 - Use environment variables to pass credentials when you need to use different values between the plan and apply steps.
 - The `.terraform/terraform.tfstate` file contains the backend configuration for the current working directory. All plan files capture the information in `.terraform/terraform.tfstate` at the time the plan was created. This helps ensure Terraform is applying the plan to correct set of infrastructure.
+- Recommend using environment variables to supply credentials and other sensitive data. If you use `-backend-config` or hardcode these values directly in your configuration, Terraform will include these values in both the `.terraform` subdirectory and in plan files. This can leak sensitive credentials.
+- When some or all of the arguments are omitted, we call this a `partial configuration`. With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process.
 
 ### [HCP Terraform](https://app.terraform.io/)
 - HCP Terraform allows you to collaborate on infrastructure projects within your organization.
