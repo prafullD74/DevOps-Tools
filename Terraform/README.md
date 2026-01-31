@@ -91,6 +91,26 @@
 6. When using the default local backend, Terraform stores state in `terraform.tfstate` for a single workspace, or in the `terraform.tfstate.d` directory when multiple workspaces are used.
 7.  `init` command is idempotent, and will have no effect if no changes are required. When you initialize a Terraform workspace, Terraform configures the backend, installs all providers and modules referred to in your configuration, and creates a version lock file if one doesn't already exist.[Initialize Terraform Configuration tutorial](https://developer.hashicorp.com/terraform/tutorials/cli/init?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS).
 
+
+## [Backend block configuration](https://developer.hashicorp.com/terraform/language/backend)
+- The `backend` defines where Terraform stores its `state` data files. Define a backend block to store state in a remote object. 
+- To configure a `backend`, add a nested backend block within the top-level `terraform` block.
+  ```hcl
+  terrafrom {
+    backend "remote" {
+      organization = "mycompany_corp"
+
+      Workspace {
+        name = "my-app-dev"
+      }
+    }
+  }
+  ```
+- Terraform uses a backend called [`local`](https://developer.hashicorp.com/terraform/language/backend/local) by default. The `local` backend type stores state as a local file on disk.
+- Backend arguments are specific to the backend type and define where and how Terraform stores the configuration state.
+- Use environment variables to pass credentials when you need to use different values between the plan and apply steps.
+- The `.terraform/terraform.tfstate` file contains the backend configuration for the current working directory. All plan files capture the information in `.terraform/terraform.tfstate` at the time the plan was created. This helps ensure Terraform is applying the plan to correct set of infrastructure.
+
 ### [HCP Terraform](https://app.terraform.io/)
 - HCP Terraform allows you to collaborate on infrastructure projects within your organization.
 - Securely stores your Terraform state and variables, including API tokens and access keys.
