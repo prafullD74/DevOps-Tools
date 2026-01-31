@@ -117,7 +117,22 @@
   - A backend configuration file has the contents of the `backend` block, `*.backendname.tfbackend` (e.g. config.consul.tfbackend) naming pattern.
   - Command-line key/value pairs: The Consul backend also requires a Consul access token. Consul token would be provided by setting either the `CONSUL_HTTP_TOKEN` or `CONSUL_HTTP_AUTH` environment variables.
 
-## [Workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)
+## [State](https://developer.hashicorp.com/terraform/language/state)
+1. State is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures.
+2. Terraform uses state to determine which changes to make to your infrastructure.
+3. The primary purpose of Terraform state is to store bindings between objects in a remote system and resource instances declared in your configuration.
+4. Purpose of Terraform State
+   - Terraform requires some sort of database to map Terraform config to the real world. Mapping configuration to resources in the real world, Terraform uses its own state structure.
+   - Terraform can guarantee a one-to-one mapping when it creates objects and records their identities in the state. When importing objects created outside of Terraform, you must make sure that each distinct object is imported to only one resource instance.
+   - Terraform must also track [`metadata`](https://developer.hashicorp.com/terraform/language/state/purpose#metadata) such as resource dependencies. To ensure correct operation, Terraform retains a copy of the most recent set of dependencies within the state. Now Terraform can still determine the correct order for destruction from the state when you delete one or more items from the configuration.
+5. Terraform must know the current state of resources in order to effectively determine the changes that it needs to make to reach your desired configuration.
+   - For small infrastructures, Terraform can query your providers and sync the latest attributes from all your resources. This is the default behavior of Terraform: for every plan and apply, Terraform will sync all resources in your state.
+   - For larger infrastructures, querying every resource is too slow.
+     - Cloud providers do not provide APIs to query multiple resources at once
+     - Cloud providers almost always have API rate limiting (so Terraform can only request a certain number of resources in a period of time.)
+     - Larger users of Terraform make heavy use of the `-refresh=false` flag as well as the `-target` flag in order to work around this. In these scenarios, the cached state is treated as the record of truth.
+5. [Workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)
+6. [Remote state](https://developer.hashicorp.com/terraform/language/state/remote) is the recommended solution when using Terraform in a team it is important for everyone to be working with the same state so that operations will be applied to the same remote objects. With a fully-featured state backend, Terraform can use `remote locking` as a measure to avoid two or more different users accidentally running Terraform at the same time, and thus ensure that each Terraform run begins with the most recent updated state.
 
 ## [Stacks](https://developer.hashicorp.com/terraform/language/stacks)
 
