@@ -117,6 +117,11 @@
   - A backend configuration file has the contents of the `backend` block, `*.backendname.tfbackend` (e.g. config.consul.tfbackend) naming pattern.
   - Command-line key/value pairs: The Consul backend also requires a Consul access token. Consul token would be provided by setting either the `CONSUL_HTTP_TOKEN` or `CONSUL_HTTP_AUTH` environment variables.
 
+## [Workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)
+
+## [Stacks](https://developer.hashicorp.com/terraform/language/stacks)
+
+
 ### [HCP Terraform](https://app.terraform.io/)
 - HCP Terraform allows you to collaborate on infrastructure projects within your organization.
 - Securely stores your Terraform state and variables, including API tokens and access keys.
