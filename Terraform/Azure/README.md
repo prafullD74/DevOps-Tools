@@ -8,7 +8,7 @@
    - The human-readable configuration language helps you write infrastructure code quickly.
    - Terraform's state allows you to track resource changes throughout your deployments.
    - You can commit your configurations to version control to safely collaborate on infrastructure.
-
+### [Installation and configuration of Terraform](https://learn.microsoft.com/en-us/azure/developer/terraform/quickstart-configure)
 ### Package Manager
 [Chocolatey](https://chocolatey.org/) is a free and open-source package management system for Windows. If you have Chocolatey installed, use it to install Terraform from your command line.
 ```bash
