@@ -7,7 +7,7 @@
   ![core Terraform workflow](https://web-unified-docs-hashicorp.vercel.app/api/assets/terraform/latest/img/docs/intro-terraform-workflow.png)
 - [Plugin development](https://developer.hashicorp.com/terraform/plugin) Terraform is logically split into two main parts:
   1. **Terraform Core**: is the Terraform binary that communicates with plugins to manage infrastructure resources.
-  2. **Terraform Plugins**: Plugins are executable binaries written in Go that communicate with Terraform Core over an RPC interface. Terraform currently supports one type of plugin called [providers](https://developer.hashicorp.com/terraform/language/providers).
+  2. **Terraform Plugins**: Plugins are executable binaries written in Go that communicate with Terraform Core over an RPC (remote procedure calls) interface. Terraform currently supports one type of plugin called [providers](https://developer.hashicorp.com/terraform/language/providers).
 - Terraform workflow
   1. **Initialize** prepares your workspace so Terraform can apply your configuration.
   2. **Plan** allows you to preview the changes Terraform will make before you apply them.
