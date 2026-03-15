@@ -19,7 +19,7 @@ choco install terraform
 ```powershell
 az upgrade
 ```
-### Authenticate
+### [Authenticate](https://learn.microsoft.com/en-us/azure/developer/terraform/authenticate-to-azure?tabs=bash#2-authenticate-terraform-to-azure)
 - Terraform only supports authenticating to Azure with the Azure CLI. Authenticating using Azure PowerShell isn't supported.
 ```powershell
 az login
