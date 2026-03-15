@@ -21,4 +21,5 @@
    1. [aws_s3_bucket](https://registry.terraform.io/providers/-/aws/latest/docs/resources/s3_bucket)
    2. [aws_s3_bucket_versioning](https://registry.terraform.io/providers/-/aws/latest/docs/resources/s3_bucket_versioning)
    3. [aws_s3_bucket_object_lock_configuration](https://registry.terraform.io/providers/-/aws/latest/docs/resources/s3_bucket_object_lock_configuration)
-4. []()
+3. [GCP](https://docs.cloud.google.com/storage/docs/terraform-create-bucket-upload-object)
+   1. [google_storage_bucket](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket)
