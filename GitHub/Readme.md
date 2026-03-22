@@ -19,7 +19,7 @@
    1.	Local Version Control System: a local database located on your local computer in which every file change is stored as a patch.
    2.	Centralized Version Control System: a single server that contains all the file versions. most well-known examples of centralized version control systems are Microsoft Team Foundation Server (TFS) and SVN.
    3.	Distributed Version Control System: Git is the most well-known example of distributed version control systems. With distributed version control systems, clients don’t just check out the latest snapshot of the files from the server, they fully mirror the repository, including its full history. Thus, everyone collaborating on a project owns a local copy of the whole project, i.e. owns their own local database with their own complete history.
-7. A deploy key is an SSH key that is stored on your server and grants access to a single GitHub repository. This key is attached directly to the repository instead of to a personal user account.
+7. A [deploy key](https://docs.github.com/en/get-started/quickstart/github-glossary#deploy-key) is an SSH key that is stored on your server and grants access to a single GitHub repository. This key is attached directly to the repository instead of to a personal user account.
 ## Installation & Training
 - install the [GitHub Desktop](https://desktop.github.com/) client. For more information, see ["Installing and configuring GitHub Desktop."](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop)
 - For [installation instructions](https://docs.github.com/en/github-cli/github-cli/about-github-cli#installing-github-cli) for GitHub CLI, see the [GitHub CLI repository](https://github.com/cli/cli#installation).
@@ -29,7 +29,15 @@
 ## 
 - [Creating a repository](https://docs.github.com/en/get-started/quickstart/create-a-repo?tool=cli#create-a-repository) for your project allows you to store code in GitHub. 
 - [Open Source Guides](https://opensource.guide/) that will help you foster a healthy open source community by recommending best practices for creating and maintaining repositories for your open source project. [About GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli)
+- [Squash](https://docs.github.com/en/get-started/quickstart/github-glossary#squash) : To combine multiple commits into a single commit. Also, a Git command.
 
 ## [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo#about-forks)
 - A fork is a new repository that shares code and visibility settings with the original “upstream” repository. Forking a repository will allow you to make changes to another repository without affecting the original.
 
+| Command | Use |
+|---|---|
+| gh repo fork REPOSITORY | create a fork of a repository |
+| gh repo fork REPOSITORY --org "octo-org" | create the fork in an organization, use the --org flag |
+| gh repo fork REPOSITORY --clone=true | create a clone use the --clone flag |
+| gh repo fork REPOSITORY --remote=true | configure a remote repository use the --remote flag |
+| gh repo fork REPOSITORY --remote-name "main-remote-repo" | specify the remote repository's name  |
